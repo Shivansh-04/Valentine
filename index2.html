@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine's Website</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Home Section -->
+      <div class="home">
+        <h1>Will you be my Valentine?</h1>
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button> <br />
+        <img
+          src="https://media1.tenor.com/m/zGm5acSjHCIAAAAd/cat-begging.gif"
+          alt="Valentine GIF"
+        />
+      </div>
+
+      <!-- No section -->
+      <div class="no">
+        <h1>Oh no! You Broke my Heart ＞﹏＜</h1>
+        <img
+          src="https://media1.tenor.com/m/0Ym9uQRAIoEAAAAC/sad.gif"
+          alt="Valentine GIF"
+        />
+        <br />
+        <button id="noNext">Go back</button>
+      </div>
+
+      <!-- Intermediate Section -->
+      <div class="intermediate">
+        <!-- <h2>Thank You!</h2> -->
+        <img
+          src="https://media.tenor.com/K8jLD3im_RQAAAAi/thank-you.gif"
+          alt="Thank You GIF"
+        />
+        <h2>There's a lot more... ⸜(｡˃ ᵕ ˂ )⸝♡</h2>
+        <button id="intermediateNext">
+          Click Me <br />
+          (˶ᵔ ᵕ ᵔ˶)
+        </button>
+      </div>
+
+      <!-- Calendar Section -->
+      <div class="calendar">
+        <h2>
+          I'm planning a special day for you. <br> Please let me know when you're
+          available.
+        </h2>
+        <input type="date" id="datePicker" />
+        <button id="dateNext">Next</button>
+        <br />
+        <img
+          src="https://media.tenor.com/adYqr_srXkQAAAAi/holding-hands.gif"
+          alt="holding-hands"
+        />
+      </div>
+
+      <!-- Food Selection Section -->
+      <div class="food-selection">
+        <h2>What will we eat?</h2>
+        <div class="food-option">
+          <label for="pizza">
+            <img
+              src="https://content3.jdmagicbox.com/comp/banda/d8/9999px519.x519.190517225339.s9d8/catalogue/pizza-hot-family-restaurant-aliganj-banda-pizza-outlets-l64ew8bwn0.jpg"
+              alt="Pizza"
+            />
+            <br />Pizza
+          </label>
+          <input type="checkbox" id="pizza" name="food" value="Pizza" />
+        </div>
+        <div class="food-option">
+          <label for="burger">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLvBSYpdrmjC6s63P5oWgTiU4gPl36dkdVfQ&s"
+              alt="Burger"
+            />
+            <br />Burger
+          </label>
+          <input type="checkbox" id="burger" name="food" value="Burger" />
+        </div>
+        <div class="food-option">
+          <label for="pasta">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX-_PzrCRZPnEo-1hB4BMofk6LAvJN0hSGCQ&s"
+              alt="Pasta"
+            />
+            <br />Pasta
+          </label>
+          <input type="checkbox" id="pasta" name="food" value="Pasta" />
+        </div>
+        <div class="food-option">
+          <label for="sushi">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSuFaUe2_OoBJc8oDKmWRjfRIZesuf2morSA&s"
+              alt="Sushi"
+            />
+            <br />Cookie's
+          </label>
+          <input type="checkbox" id="sushi" name="food" value="Sushi" />
+        </div>
+        <div class="food-option">
+          <label for="icecream">
+            <img
+              src="https://buttermilkbysam.com/wp-content/uploads/2023/07/no-churn-chocolate-ice-cream-7-819x1024.webp"
+              alt="Ice Cream"
+            />
+            <br />Ice Cream
+          </label>
+          <input type="checkbox" id="icecream" name="food" value="Ice Cream" />
+        </div>
+        <br />
+        <button class="submit-btn" id="submitFood">Submit</button>
+      </div>
+
+      <!-- Desert Selection section  -->
+      <div class="desert">
+        <h2>What will we have for desert?</h2>
+        <div class="desert-option">
+          <label for="cake">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMxjYUg4pE1bn0YmwwsCem729vxgmSAAzP9w&s"
+              alt="Cake"
+            />
+            <br />Cake
+          </label>
+          <input type="checkbox" id="cake" name="desert" value="Cake" />
+        </div>
+        <div class="desert-option">
+          <label for="coffee"></label>
+            <img
+              src="https://plus.unsplash.com/premium_photo-1674327105076-36c4419864cf?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwcHVjY2lubyUyMGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D"
+              alt="Coffee"
+            />
+            <br />Coffee
+          </label>
+          <input type="checkbox" id="coffee" name="desert" value="Coffee" />
+        </div>
+        <div class="desert-option">
+          <label for="bhelpuri">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Indian_cuisine-Chaat-Bhelpuri-03.jpg/640px-Indian_cuisine-Chaat-Bhelpuri-03.jpg"
+              alt="Bhel Puri"
+            />
+            <br />Bhel Puri
+          </label>
+          <input type="checkbox" id="bhelpuri" name="desert" value="Bhel Puri" />
+        </div>
+        <div class="desert-option">
+          <label for="momos">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCRRZOYcodfwoTHCriK920kdfGjqs_DhkZZQ&s"
+              alt="Momo's"
+            />
+            <br />Momo's
+          </label>
+          <input type="checkbox" id="momos" name="desert" value="Momo's" />
+        </div>
+        <br />
+        <button class="submit-btn" id="submitDesert">Submit</button>
+      </div>
+
+      <!-- Thank You Section -->
+      <div class="thank-you">
+        <h1>Thank You! Miss</h1>
+        <p>
+          Bas thoda sa thanks bolna tha for saying yes to being my Valentine!
+          <br />
+          It means so much to me, and I’m really excited to spend this special
+          day with you. <br />
+          Can’t wait for the moments we’ll share! ❤️
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #ffe6e6;
+      color: #b30000;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin-top: 20vh;
+    }
+    button {
+      background-color: #ff6666;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e60000;
+    }
+    .calendar, .food-selection, .thank-you {
+      display: none;
+    }
+    .food-option {
+      margin: 10px;
+      display: inline-block;
+      text-align: center;
+    }
+    .food-option img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+    }
+    .submit-btn {
+      margin-top: 20px;
+    }
+    .home img {
+      margin-top: 20px;
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="home">
+      <h1>Will you be my Valentine?</h1>
+      <button id="yesBtn">Yes</button>
+      <button id="noBtn">No</button> <br>
+      <img src="https://media1.tenor.com/m/zGm5acSjHCIAAAAd/cat-begging.gif" alt="Valentine GIF">
+    </div>
+    
+    <div class="calendar">
+        <h2>I'm planning a special day for you. Please let me know when you're available.</h2>
+      <input type="date" id="datePicker">
+      <button id="dateNext">Next</button>
+    </div>
+
+    <div class="food-selection">
+      <h2>What will we eat?</h2>
+      <div class="food-option">
+        <input type="checkbox" id="pizza" name="food" value="Pizza">
+        <label for="pizza">
+          <img src="pizza.jpg" alt="Pizza">
+          <br>Pizza
+        </label>
+      </div>
+      <div class="food-option">
+        <input type="checkbox" id="burger" name="food" value="Burger">
+        <label for="burger">
+          <img src="burger.jpg" alt="Burger">
+          <br>Burger
+        </label>
+      </div>
+      <div class="food-option">
+        <input type="checkbox" id="pasta" name="food" value="Pasta">
+        <label for="pasta">
+          <img src="pasta.jpg" alt="Pasta">
+          <br>Pasta
+        </label>
+      </div>
+      <div class="food-option">
+        <input type="checkbox" id="sushi" name="food" value="Sushi">
+        <label for="sushi">
+          <img src="sushi.jpg" alt="Sushi">
+          <br>Sushi
+        </label>
+      </div>
+      <div class="food-option">
+        <input type="checkbox" id="icecream" name="food" value="Ice Cream">
+        <label for="icecream">
+          <img src="icecream.jpg" alt="Ice Cream">
+          <br>Ice Cream
+        </label>
+      </div>
+      <button class="submit-btn" id="submitFood">Submit</button>
+    </div>
+
+    <div class="thank-you">
+      <h1>Thank You!</h1>
+      <p>Your responses have been recorded.</p>
+    </div>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const dateNext = document.getElementById('dateNext');
+    const submitFood = document.getElementById('submitFood');
+
+    const home = document.querySelector('.home');
+    const calendar = document.querySelector('.calendar');
+    const foodSelection = document.querySelector('.food-selection');
+    const thankYou = document.querySelector('.thank-you');
+
+    let selectedDate = '';
+    let selectedFoods = [];
+
+    yesBtn.addEventListener('click', () => {
+      home.style.display = 'none';
+      calendar.style.display = 'block';
+    });
+
+    noBtn.addEventListener('click', () => {
+      alert('Oh no! Maybe next time.');
+    });
+
+    dateNext.addEventListener('click', () => {
+      selectedDate = document.getElementById('datePicker').value;
+      if (!selectedDate) {
+        alert('Please select a date!');
+        return;
+      }
+      calendar.style.display = 'none';
+      foodSelection.style.display = 'block';
+    });
+
+    submitFood.addEventListener('click', () => {
+      const foodOptions = document.querySelectorAll('input[name="food"]:checked');
+      selectedFoods = Array.from(foodOptions).map(food => food.value);
+
+      if (selectedFoods.length === 0) {
+        alert('Please select at least one food option!');
+        return;
+      }
+
+      foodSelection.style.display = 'none';
+      thankYou.style.display = 'block';
+
+    //   sendEmail(selectedDate, selectedFoods);
+    });
+
+    // function sendEmail(date, foods) {
+    //   const emailBody = `Selected Date: ${date}\nSelected Foods: ${foods.join(', ')}`;
+    //   window.location.href = `mailto:your-email@example.com?subject=Valentine's Response&body=${encodeURIComponent(emailBody)}`;
+    // }
+  </script>
+</body>
+</html>

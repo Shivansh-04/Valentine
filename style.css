@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffe6e6;
+    color: #b30000;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 20vh;
+}
+
+button {
+    background-color: #ff6666;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e60000;
+}
+
+.calendar,
+.food-selection,
+.thank-you,
+.intermediate,
+.no,
+.desert {
+    display: none;
+}
+
+.food-option,
+.desert-option {
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.food-option img,
+.desert-option img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.submit-btn {
+    margin-top: 20px;
+}
+
+.home img,
+.intermediate img,
+.no img {
+    margin-top: 20px;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.thank-you p {
+    font-size: 24px;
+    margin-top: 20px;
+}
